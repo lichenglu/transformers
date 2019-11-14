@@ -47,7 +47,8 @@ from transformers import (WEIGHTS_NAME, AdamW, WarmupLinearSchedule,
                                   GPT2Config, GPT2LMHeadModel, GPT2Tokenizer,
                                   OpenAIGPTConfig, OpenAIGPTLMHeadModel, OpenAIGPTTokenizer,
                                   RobertaConfig, RobertaForMaskedLM, RobertaTokenizer,
-                                  DistilBertConfig, DistilBertForMaskedLM, DistilBertTokenizer)
+                                  DistilBertConfig, DistilBertForMaskedLM, DistilBertTokenizer,
+                                  XLNetConfig, XLNetLMHeadModel, XLNetTokenizer)
 
 
 logger = logging.getLogger(__name__)
@@ -56,6 +57,7 @@ logger = logging.getLogger(__name__)
 MODEL_CLASSES = {
     'gpt2': (GPT2Config, GPT2LMHeadModel, GPT2Tokenizer),
     'openai-gpt': (OpenAIGPTConfig, OpenAIGPTLMHeadModel, OpenAIGPTTokenizer),
+    'xlnet': (XLNetConfig, XLNetLMHeadModel, XLNetTokenizer),
     'bert': (BertConfig, BertForMaskedLM, BertTokenizer),
     'roberta': (RobertaConfig, RobertaForMaskedLM, RobertaTokenizer),
     'distilbert': (DistilBertConfig, DistilBertForMaskedLM, DistilBertTokenizer)
